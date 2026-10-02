@@ -1,0 +1,430 @@
+:root {
+    --primary-color: #1e3a8a;
+    --secondary-color: #0891b2;
+    --tertiary-color: #d97706;
+    --neutral-color: #0f172a;
+    --background-color: #f4f4f4;
+    --text-color: #ffffff;
+    --error-color: #ff4d4d;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-size: 0.875rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem 1.25rem;
+    background-color: #1e3a8a;
+    min-height: 3.75rem;
+}
+
+main,
+section {
+    display: flex;
+    justify-content: center;
+    margin: 1.25rem auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+/*  ==============================
+            font sizes
+    ==============================  */
+
+.welcome h2 {
+    font-size: 1.6rem;
+}
+
+.logo-text h1 {
+    font-size: 1.6rem;
+}
+
+.logo-text p {
+    font-size: 1rem;
+}
+
+/*  ==============================  
+            Header styles
+    ==============================  */
+
+.logo {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.625rem;
+    font-weight: bold;
+    color: #f4f4f4;
+}
+
+.logo-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    color: #1e3a8a;
+    background-color: #f4f4f4;
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.logo-text h1 {
+    margin: 0;
+    font-weight: bold;
+}
+
+.logo-text p {
+    margin: 0;
+}
+
+/*  ==============================
+        Navigation link styles
+    ==============================  */
+
+.navigation-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    min-height: 3.125rem;
+    align-items: center;
+}
+
+.navigation {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+}
+
+.navigation li {
+    margin: 0;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #dae2fd;
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    color: #6cd3f7;
+}
+
+/*  ==============================
+        User actions styles
+    ============================== */
+
+.user-actions {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.notification-container,
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.notification-link,
+.profile-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #f4f4f4;
+    transition: color 0.2s ease;
+}
+
+.nav-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #f4f4f4;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.notification-container:hover .notification-link,
+.profile-container:hover .profile-link {
+    color: #6cd3f7;
+}
+
+.notification-container:hover .nav-icon,
+.profile-container:hover .nav-icon {
+    transform: scale(1.1);
+    color: #6cd3f7;
+}
+
+/*  ==============================
+            Section 1
+    ============================== */
+
+.welcome {
+    text-align: left;
+    margin: 1.25rem 0;
+}
+
+/*  ==============================
+        Card container styles
+    ============================== */
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 6vh 0;
+    margin: 1.25rem auto;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+}
+
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    max-width: 15rem;
+    height: 17.5rem;
+    border: 0.125rem solid #bec6e0;
+    border-radius: 1.25rem;
+    padding: 1.25rem;
+    box-sizing: border-box;
+}
+
+.card-link:hover,
+.card-link:focus {
+    box-shadow: 0 0 1.25rem rgba(30, 58, 138, 0.5);
+    transform: scale(1.01);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-link:hover,
+.card-link:focus,
+.card-link:hover .arrow-container p,
+.card-link:focus .arrow-container p,
+.card-link:hover .arrow-icon,
+.card-link:focus .arrow-icon {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    stroke: var(--text-color);
+    letter-spacing: 0.04rem;
+}
+
+.card-link:hover #register-icon,
+.card-link:focus #register-icon,
+.card-link:hover #active-incidents-icon,
+.card-link:focus #active-incidents-icon,
+.card-link:hover #my-reports-icon,
+.card-link:focus #my-reports-icon {
+    background-color: var(--background-color);
+    stroke: var(--secondary-color);
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 62.5rem;
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 1.25rem;
+    margin-bottom: 0.625rem;
+}
+
+#register-icon {
+    background-color: #1e3a8a;
+}
+
+#active-incidents-icon {
+    background-color: #0891b2;
+}
+
+#my-reports-icon {
+    background-color: #0f172a;
+}
+
+.arrow-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.5rem 0;
+    border-top: 1px solid #ccc;
+}
+
+.arrow-icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+.arrow-container p {
+    margin: 0;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.arrow-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: none;
+    stroke: var(--neutral-color);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/*  ===========================================
+        styles for buttons and form elements
+    =========================================== */
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.02);
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+}
+
+.form-input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(30, 58, 138, 0.5);
+}
+
+.form-checkbox {
+    margin-right: 0.5rem;
+    transform: scale(1.2);
+}
+
+.form-checkbox:checked {
+    accent-color: var(--secondary-color);
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+.error-message.active {
+    display: block;
+    /* Se muestra cuando se agrega la clase 'active' */
+}
+
+/* ==============================
+     Media Queries (Responsivo)
+   ============================== */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.5rem 0.75rem;
+        gap: 0.5rem;
+    }
+
+    .home-page .logo-text {
+        display: none;
+    }
+
+    /* Quita el margen del icono SOLO cuando el texto no está (en la home-page) */
+    .home-page .logo-icon {
+        margin-right: 0;
+    }
+
+    .navigation-container {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navigation ul {
+        gap: 0.75rem;
+    }
+
+    #home-page {
+        display: none;
+    }
+
+    /* Acciones de usuario en móvil */
+    .user-actions {
+        flex: 1;
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+
+    .notification-link,
+    .profile-link {
+        display: none;
+    }
+
+    .nav-icon {
+        width: 1.625rem;
+        height: 1.625rem;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 3vh 0;
+        margin: 1.25rem auto;
+        gap: 1.25rem;
+        flex-wrap: wrap;
+    }
+}

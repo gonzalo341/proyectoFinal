@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html class="h-full bg-background" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Reporte Ciudadano</title>
+
+    <!-- Google Fonts: Public Sans -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Material Symbols Outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Tailwind Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary": "#006780",
+                        "on-surface": "#131b2e",
+                        "primary-fixed": "#dce1ff",
+                        "secondary-fixed": "#b7eaff",
+                        "inverse-surface": "#283044",
+                        "tertiary-fixed": "#ffdcc3",
+                        "surface-container": "#eaedff",
+                        "on-secondary-fixed-variant": "#004e61",
+                        "on-surface-variant": "#444651",
+                        "secondary-fixed-dim": "#6cd3f7",
+                        "tertiary-container": "#653400",
+                        "on-error-container": "#93000a",
+                        "surface": "#faf8ff",
+                        "surface-container-high": "#e2e7ff",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#4059aa",
+                        "background": "#faf8ff",
+                        "on-tertiary-fixed-variant": "#6e3900",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#2f1500",
+                        "inverse-primary": "#b6c4ff",
+                        "secondary-container": "#76dcff",
+                        "surface-dim": "#d2d9f4",
+                        "on-primary-fixed-variant": "#264191",
+                        "primary-container": "#1e3a8a",
+                        "surface-variant": "#dae2fd",
+                        "on-primary-container": "#90a8ff",
+                        "on-primary-fixed": "#00164e",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#442100",
+                        "on-tertiary-container": "#fc922b",
+                        "outline-variant": "#c5c5d3",
+                        "tertiary-fixed-dim": "#ffb77d",
+                        "on-background": "#131b2e",
+                        "surface-container-low": "#f2f3ff",
+                        "primary": "#00236f",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#757682",
+                        "on-secondary-container": "#006077",
+                        "on-secondary-fixed": "#001f28",
+                        "inverse-on-surface": "#eef0ff",
+                        "surface-bright": "#faf8ff",
+                        "primary-fixed-dim": "#b6c4ff",
+                        "surface-container-highest": "#dae2fd"
+                    },
+
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+
+                    spacing: {
+                        "space-xs": "0.5rem",
+                        "gutter": "1.5rem",
+                        "space-sm": "0.75rem",
+                        "space-xl": "3rem",
+                        "space-lg": "2rem",
+                        "margin": "2rem",
+                        "gutter-mobile": "1rem",
+                        "space-md": "1.25rem",
+                        "margin-mobile": "1.25rem"
+                    },
+
+                    fontFamily: {
+                        "headline-xl": ["Public Sans"],
+                        "headline-lg": ["Public Sans"],
+                        "label-md": ["Public Sans"],
+                        "body-md": ["Public Sans"],
+                        "body-xl": ["Public Sans"],
+                        "body-lg": ["Public Sans"],
+                        "headline-lg-mobile": ["Public Sans"],
+                        "badge": ["Public Sans"],
+                        "label-lg": ["Public Sans"],
+                        "headline-xl-mobile": ["Public Sans"],
+                        "headline-md": ["Public Sans"]
+                    },
+
+                    fontSize: {
+                        "headline-xl": ["40px", {
+                            lineHeight: "52px",
+                            letterSpacing: "-0.02em",
+                            fontWeight: "800"
+                        }],
+
+                        "headline-lg": ["32px", {
+                            lineHeight: "44px",
+                            letterSpacing: "-0.01em",
+                            fontWeight: "700"
+                        }],
+
+                        "label-md": ["16px", {
+                            lineHeight: "24px",
+                            letterSpacing: "0.02em",
+                            fontWeight: "700"
+                        }],
+
+                        "body-md": ["16px", {
+                            lineHeight: "26px",
+                            fontWeight: "400"
+                        }],
+
+                        "body-xl": ["20px", {
+                            lineHeight: "32px",
+                            fontWeight: "400"
+                        }],
+
+                        "body-lg": ["18px", {
+                            lineHeight: "28px",
+                            fontWeight: "400"
+                        }],
+
+                        "headline-lg-mobile": ["26px", {
+                            lineHeight: "36px",
+                            fontWeight: "700"
+                        }],
+
+                        "badge": ["15px", {
+                            lineHeight: "20px",
+                            letterSpacing: "0.04em",
+                            fontWeight: "800"
+                        }],
+
+                        "label-lg": ["18px", {
+                            lineHeight: "26px",
+                            fontWeight: "700"
+                        }],
+
+                        "headline-xl-mobile": ["30px", {
+                            lineHeight: "40px",
+                            letterSpacing: "-0.01em",
+                            fontWeight: "800"
+                        }],
+
+                        "headline-md": ["24px", {
+                            lineHeight: "34px",
+                            fontWeight: "700"
+                        }]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/login.css" />
+
+</head>
+
+<body
+    class="min-h-full flex flex-col font-body-md text-on-surface bg-background antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+
+    <!-- ACCESSIBILITY BAR & BANNER -->
+    <aside aria-label="Opciones de accesibilidad"
+        class="w-full bg-inverse-surface text-inverse-on-surface py-2 px-margin border-b border-outline-variant">
+
+        <div class="max-w-[1200px] mx-auto flex flex-wrap justify-between items-center gap-space-xs text-body-md">
+
+            <div class="flex items-center gap-2">
+
+                <span class="material-symbols-outlined text-secondary-container" data-icon="verified_user">
+                    verified_user
+                </span>
+
+                <span class="font-bold">
+                    Portal Municipal Seguro y Certificado
+                </span>
+
+            </div>
+
+            <div class="flex items-center gap-4">
+
+                <button class="flex items-center gap-1 hover:text-secondary-fixed transition-colors font-label-md"
+                    id="font-increase-btn" title="Aumentar tamaño del texto" type="button">
+
+                    <span class="material-symbols-outlined" data-icon="format_size">
+                        format_size
+                    </span>
+
+                    <span>
+                        A+ Texto Grande
+                    </span>
+
+                </button>
+
+                <span class="text-outline-variant">
+                    |
+                </span>
+
+                <a class="flex items-center gap-1 hover:underline text-inverse-on-surface font-label-md" href="tel:147">
+
+                    <span class="material-symbols-outlined" data-icon="support_agent">
+                        support_agent
+                    </span>
+
+                    <span>
+                        Ayuda Telefónica
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- HEADER -->
+    <header class="bg-primary-container text-on-primary sticky top-0 z-40 border-b border-outline-variant/30">
+        <div class="flex justify-between items-center w-full px-6 max-w-6xl mx-auto h-16">
+
+            <!-- Brand Minimal -->
+            <div class="flex items-center gap-3">
+                <span
+                    class="w-9 h-9 rounded-lg bg-surface-container-lowest text-primary-container flex items-center justify-center shadow-sm">
+                    <span class="material-symbols-outlined text-[22px]" data-icon="apartment">apartment</span>
+                </span>
+
+                <div class="leading-none">
+                    <a class="font-bold text-lg text-on-primary tracking-tight block" href="#">
+                        Reporte Ciudadano
+                    </a>
+
+                    <span class="text-xs text-primary-fixed opacity-80 font-medium">
+                        Municipio Activo
+                    </span>
+                </div>
+            </div>
+
+
+            <div class="flex items-center gap-space-sm">
+
+                <div
+                    class="hidden sm:flex items-center gap-2 bg-primary px-3 py-1.5 rounded-xl border border-primary-fixed-dim">
+
+                    <span class="material-symbols-outlined text-secondary-container" data-icon="lock">
+                        lock
+                    </span>
+
+                    <span class="font-label-md text-on-primary">
+                        Conexión 100% Cifrada
+                    </span>
+
+                </div>
+
+                <a class="px-4 py-2 bg-on-primary text-primary-container font-label-md rounded-xl hover:bg-surface-container transition-colors flex items-center gap-2 font-bold focus:outline-none focus:ring-4 focus:ring-on-primary"
+                    href="#">
+
+                    <span class="material-symbols-outlined" data-icon="info">
+                        info
+                    </span>
+
+                    <span class="hidden md:inline">
+                        Instructivo
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="flex-grow flex items-center justify-center px-4 sm:px-margin py-10 sm:py-space-xl">
+
+        <div
+            class="w-full max-w-[720px] bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-xl overflow-hidden">
+
+
+            <!-- BOTONES INGRESAR / REGISTRARME -->
+            <div class="grid grid-cols-2 p-1.5 bg-surface-container-low border-b border-outline-variant" role="tablist">
+
+                <button aria-controls="login-tab" aria-selected="true"
+                    class="py-3 text-center font-label-md rounded-xl transition-all font-bold bg-surface-container-lowest text-primary-container shadow-sm flex items-center justify-center gap-2"
+                    id="tab-login" role="tab" type="button">
+
+                    <span class="material-symbols-outlined text-xl" data-icon="login">
+                        login
+                    </span>
+
+                    <span>
+                        Ingresar
+                    </span>
+
+                </button>
+
+
+                <button aria-controls="register-tab" aria-selected="false"
+                    class="py-3 text-center font-label-md rounded-xl transition-all font-bold text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-2"
+                    id="tab-register" role="tab" type="button">
+
+                    <span class="material-symbols-outlined text-xl" data-icon="person_add">
+                        person_add
+                    </span>
+
+                    <span>
+                        Registrarme
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <!-- ===================================================== -->
+            <!-- LOGIN -->
+            <!-- ===================================================== -->
+
+            <div id="login-tab" class="p-6 sm:p-8 space-y-6">
+
+                <div class="text-left space-y-1">
+
+                    <h1 class="font-headline-md text-headline-md text-on-surface font-extrabold tracking-tight">
+                        Bienvenido al Portal
+                    </h1>
+
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                        Acceda con sus credenciales ciudadanas
+                    </p>
+
+                </div>
+
+
+                <form action="#" class="space-y-5" method="POST" novalidate>
+
+                    <div class="space-y-1.5">
+
+                        <label class="block font-label-md text-on-surface font-bold" for="login-dni">
+                            Número de DNI
+                        </label>
+
+                        <div class="relative">
+
+                            <div aria-hidden="true"
+                                class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-outline">
+
+                                <span class="material-symbols-outlined text-xl" data-icon="badge">
+                                    badge
+                                </span>
+
+                            </div>
+
+                            <input autocomplete="username"
+                                class="w-full min-h-[50px] pl-11 pr-4 bg-surface font-body-md text-on-surface rounded-xl border border-outline focus:border-primary-container focus:ring-0 placeholder:text-outline transition-colors"
+                                id="login-dni" inputmode="numeric" name="dni" placeholder="Ej: 28450123" required
+                                type="text">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="space-y-1.5">
+
+                        <div class="flex justify-between items-center">
+
+                            <label class="block font-label-md text-on-surface font-bold" for="login-password">
+                                Contraseña
+                            </label>
+
+                            <a class="text-sm font-label-md text-primary font-bold hover:underline" href="#">
+                                ¿Olvidó su contraseña?
+                            </a>
+
+                        </div>
+
+
+                        <div class="relative">
+
+                            <div aria-hidden="true"
+                                class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-outline">
+
+                                <span class="material-symbols-outlined text-xl" data-icon="key">
+                                    key
+                                </span>
+
+                            </div>
+
+                            <input autocomplete="current-password"
+                                class="w-full min-h-[50px] pl-11 pr-24 bg-surface font-body-md text-on-surface rounded-xl border border-outline focus:border-primary-container focus:ring-0 placeholder:text-outline transition-colors"
+                                id="login-password" name="password" placeholder="••••••••" required type="password">
+
+
+                            <button aria-label="Mostrar contraseña como texto visible"
+                                class="absolute inset-y-1.5 right-1.5 px-2.5 text-on-surface-variant hover:text-on-surface rounded-lg font-label-md flex items-center gap-1 transition-colors text-sm"
+                                id="toggle-login-password" type="button">
+
+                                <span class="material-symbols-outlined text-lg" id="login-eye-icon">
+                                    visibility
+                                </span>
+
+                                <span class="font-bold" id="login-toggle-label">
+                                    Ver
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="flex items-center gap-2.5 pt-0.5">
+
+                        <input
+                            class="w-4 h-4 rounded text-primary-container border-outline focus:ring-primary-container cursor-pointer"
+                            id="remember-me" name="remember-me" type="checkbox">
+
+                        <label class="font-body-md text-sm text-on-surface-variant cursor-pointer select-none"
+                            for="remember-me">
+                            Recordar mi sesión en este equipo
+                        </label>
+
+                    </div>
+
+
+                    <button
+                        class="w-full min-h-[50px] bg-primary-container text-on-primary font-label-lg rounded-xl flex items-center justify-center gap-2 hover:bg-primary active:scale-[0.99] transition-all font-bold shadow-sm"
+                        type="submit">
+
+                        <span class="material-symbols-outlined text-xl" data-icon="login">
+                            login
+                        </span>
+
+                        <span>
+                            Entrar
+                        </span>
+
+                    </button>
+
+                </form>
+
+
+                <div class="pt-4 border-t border-outline-variant space-y-3">
+
+                    <div class="flex items-center justify-center gap-2 text-sm text-on-surface-variant py-1">
+
+                        <span class="material-symbols-outlined text-secondary text-lg" data-icon="call">
+                            call
+                        </span>
+
+                        <span>
+                            ¿Dificultades de acceso?
+
+                            <a class="font-bold text-secondary hover:underline" href="tel:147">
+                                Línea 147 disponible 24/7
+                            </a>
+
+                        </span>
+
+                    </div>
+
+
+                    <a class="w-full min-h-[44px] bg-transparent text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-label-md rounded-xl flex items-center justify-center gap-2 border border-outline-variant transition-colors"
+                        href="#">
+
+                        <span class="material-symbols-outlined text-lg" data-icon="visibility_off">
+                            visibility_off
+                        </span>
+
+                        <span>
+                            Hacer un reporte 100% anónimo
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ===================================================== -->
+            <!-- REGISTRO -->
+            <!-- ===================================================== -->
+
+            <div id="register-tab" class="p-6 sm:p-8 md:p-10 hidden">
+
+                <div class="mb-8 text-center sm:text-left">
+
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-variant text-primary-container font-label-md text-sm font-semibold mb-3">
+
+                        <span class="material-symbols-outlined text-[18px]" data-icon="badge">
+                            badge
+                        </span>
+
+                        Identidad Ciudadana Digital
+
+                    </div>
+
+                    <h1 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">
+                        Crear Cuenta Ciudadana
+                    </h1>
+
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mt-2">
+                        Completá tus datos para dar seguimiento a tus reportes y trámites barriales.
+                    </p>
+
+                </div>
+
+
+                <form class="space-y-6" onsubmit="event.preventDefault();">
+
+
+                    <div class="space-y-1.5">
+
+                        <label class="block font-label-md text-label-md text-on-surface font-bold" for="full-name">
+                            Nombre y Apellido
+                            <span aria-hidden="true" class="text-error font-bold">*</span>
+                        </label>
+
+                        <div class="relative">
+
+                            <span
+                                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[22px]"
+                                data-icon="person">
+                                person
+                            </span>
+
+                            <input
+                                class="w-full min-h-[56px] pl-12 pr-4 rounded-lg border-2 border-outline/70 text-body-lg bg-surface-container-lowest text-on-surface placeholder:text-outline-variant focus:border-primary-container focus:ring-2 focus:ring-primary-container transition-all"
+                                id="full-name" name="full-name" placeholder="Ej: María Eugenia Gómez" required
+                                type="text">
+
+                        </div>
+
+                        <p class="text-xs text-on-surface-variant">
+                            Como figura en tu Documento Nacional de Identidad.
+                        </p>
+
+                    </div>
+
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+
+                        <div class="space-y-1.5">
+
+                            <label class="block font-label-md text-label-md text-on-surface font-bold"
+                                for="register-dni">
+                                Número de DNI
+                                <span aria-hidden="true" class="text-error font-bold">*</span>
+                            </label>
+
+                            <div class="relative">
+
+                                <span
+                                    class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[22px]"
+                                    data-icon="id_card">
+                                    id_card
+                                </span>
+
+                                <input
+                                    class="w-full min-h-[56px] pl-12 pr-4 rounded-lg border-2 border-outline/70 text-body-lg bg-surface-container-lowest text-on-surface placeholder:text-outline-variant focus:border-primary-container focus:ring-2 focus:ring-primary-container transition-all"
+                                    id="register-dni" name="dni" pattern="[0-9]{7,8}" placeholder="Ej: 28450123"
+                                    required type="text">
+
+                            </div>
+
+                            <p class="text-xs text-on-surface-variant">
+                                Sin puntos ni espacios (7 u 8 dígitos).
+                            </p>
+
+                        </div>
+
+
+                        <div class="space-y-1.5">
+
+                            <label class="block font-label-md text-label-md text-on-surface font-bold" for="birth-date">
+                                Fecha de Nacimiento
+                                <span aria-hidden="true" class="text-error font-bold">*</span>
+                            </label>
+
+                            <div class="relative">
+
+                                <span
+                                    class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[22px]"
+                                    data-icon="calendar_today">
+                                    calendar_today
+                                </span>
+
+                                <input
+                                    class="w-full min-h-[56px] pl-12 pr-4 rounded-lg border-2 border-outline/70 text-body-lg bg-surface-container-lowest text-on-surface placeholder:text-outline-variant focus:border-primary-container focus:ring-2 focus:ring-primary-container transition-all"
+                                    id="birth-date" name="birth-date" required type="date">
+
+                            </div>
+
+                            <p class="text-xs text-on-surface-variant">
+                                Para validación de mayoría de edad.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+
+                        <div class="space-y-1.5">
+
+                            <label class="block font-label-md text-label-md text-on-surface font-bold" for="email">
+                                Correo Electrónico
+                                <span aria-hidden="true" class="text-error font-bold">*</span>
+                            </label>
+
+                            <div class="relative">
+
+                                <span
+                                    class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[22px]"
+                                    data-icon="mail">
+                                    mail
+                                </span>
+
+                                <input
+                                    class="w-full min-h-[56px] pl-12 pr-4 rounded-lg border-2 border-outline/70 text-body-lg bg-surface-container-lowest text-on-surface placeholder:text-outline-variant focus:border-primary-container focus:ring-2 focus:ring-primary-container transition-all"
+                                    id="email" name="email" placeholder="nombre@correo.com" required type="email">
+
+                            </div>
+
+                            <p class="text-xs text-on-surface-variant">
+                                Recibirás avisos de resolución acá.
+                            </p>
+
+                        </div>
+
+
+                        <div class="space-y-1.5">
+
+                            <label class="block font-label-md text-label-md text-on-surface font-bold" for="phone">
+                                Teléfono de contacto
+                                <span aria-hidden="true" class="text-error font-bold">*</span>
+                            </label>
+
+                            <div class="relative">
+
+                                <span
+                                    class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[22px]"
+                                    data-icon="smartphone">
+                                    smartphone
+                                </span>
+
+                                <input
+                                    class="w-full min-h-[56px] pl-12 pr-4 rounded-lg border-2 border-outline/70 text-body-lg bg-surface-container-lowest text-on-surface placeholder:text-outline-variant focus:border-primary-container focus:ring-2 focus:ring-primary-container transition-all"
+                                    id="phone" name="phone" placeholder="Ej: 11 5555 4321" required type="tel">
+
+                            </div>
+
+                            <p class="text-xs text-on-surface-variant">
+                                Para alertas de cuadrillas en vía pública.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+
+                        <div class="space-y-1.5">
+
+                            <label class="block font-label-md text-label-md text-on-surface font-bold"
+                                for="neighborhood">
+                                Localidad / Barrio
+                                <span aria-hidden="true" class="text-error font-bold">*</span>
+                            </label>
+
+                            <div class="relative">
+
+                                <span
+                                    class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[22px]"
+                                    data-icon="location_city">
+                                    location_city
+                                </span>
+
+                                <select
+                                    class="w-full min-h-[56px] pl-12 pr-8 rounded-lg border-2 border-outline/70 text-body-lg bg-surface-container-lowest text-on-surface focus:border-primary-container focus:ring-2 focus:ring-primary-container transition-all"
+                                    id="neighborhood" name="neighborhood" required>
+
+                                    <option disabled selected value="">
+                                        Seleccioná tu barrio
+                                    </option>
+
+                                    <option value="centro">
+                                        Centro Histórico / Casco Urbano
+                                    </option>
+
+                                    <option value="norte">
+                                        Zona Norte / Parque Centenario
+                                    </option>
+
+                                    <option value="sur">
+                                        Zona Sur / Ribera
+                                    </option>
+
+                                    <option value="este">
+                                        Barrio Jardín y Alrededores
+                                    </option>
+
+                                    <option value="oeste">
+                                        Altos del Valle
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                            <p class="text-xs text-on-surface-variant">
+                                Asigna automáticamente la delegación barrial.
+                            </p>
+
+                        </div>
+
+
+                        <div class="space-y-1.5">
+
+                            <label class="block font-label-md text-label-md text-on-surface font-bold" for="address">
+                                Calle y Número
+                                <span aria-hidden="true" class="text-error font-bold">*</span>
+                            </label>
+
+                            <div class="relative">
+
+                                <span
+                                    class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[22px]"
+                                    data-icon="home_pin">
+                                    home_pin
+                                </span>
+
+                                <input
+                                    class="w-full min-h-[56px] pl-12 pr-4 rounded-lg border-2 border-outline/70 text-body-lg bg-surface-container-lowest text-on-surface placeholder:text-outline-variant focus:border-primary-container focus:ring-2 focus:ring-primary-container transition-all"
+                                    id="address" name="address" placeholder="Ej: Av. San Martín 1420" required
+                                    type="text">
+
+                            </div>
+
+                            <p class="text-xs text-on-surface-variant">
+                                Dirección de residencia o referencia.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+
+                        <div class="space-y-1.5">
+
+                            <label class="block font-label-md text-label-md text-on-surface font-bold" for="password">
+                                Contraseña
+                                <span aria-hidden="true" class="text-error font-bold">*</span>
+                            </label>
+
+                            <div class="relative">
+
+                                <span
+                                    class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[22px]"
+                                    data-icon="key">
+                                    key
+                                </span>
+
+                                <input
+                                    class="w-full min-h-[56px] pl-12 pr-12 rounded-lg border-2 border-outline/70 text-body-lg bg-surface-container-lowest text-on-surface placeholder:text-outline-variant focus:border-primary-container focus:ring-2 focus:ring-primary-container transition-all"
+                                    id="password" name="password" placeholder="Mínimo 8 caracteres" required
+                                    type="password">
+
+                                <button aria-label="Mostrar u ocultar contraseña"
+                                    class="absolute right-3 top-1/2 -translate-y-1/2 p-2 text-outline hover:text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container rounded"
+                                    onclick="togglePass('password', 'icon-pass-1')" type="button">
+
+                                    <span class="material-symbols-outlined text-[20px]" data-icon="visibility"
+                                        id="icon-pass-1">
+                                        visibility
+                                    </span>
+
+                                </button>
+
+                            </div>
+
+                            <p class="text-xs text-on-surface-variant">
+                                Incluir letras y números.
+                            </p>
+
+                        </div>
+
+
+                        <div class="space-y-1.5">
+
+                            <label class="block font-label-md text-label-md text-on-surface font-bold"
+                                for="password-confirm">
+                                Confirmar Contraseña
+                                <span aria-hidden="true" class="text-error font-bold">*</span>
+                            </label>
+
+                            <div class="relative">
+
+                                <span
+                                    class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[22px]"
+                                    data-icon="lock_reset">
+                                    lock_reset
+                                </span>
+
+                                <input
+                                    class="w-full min-h-[56px] pl-12 pr-12 rounded-lg border-2 border-outline/70 text-body-lg bg-surface-container-lowest text-on-surface placeholder:text-outline-variant focus:border-primary-container focus:ring-2 focus:ring-primary-container transition-all"
+                                    id="password-confirm" name="password-confirm" placeholder="Repetí tu contraseña"
+                                    required type="password">
+
+                                <button aria-label="Mostrar u ocultar confirmación de contraseña"
+                                    class="absolute right-3 top-1/2 -translate-y-1/2 p-2 text-outline hover:text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container rounded"
+                                    onclick="togglePass('password-confirm', 'icon-pass-2')" type="button">
+
+                                    <span class="material-symbols-outlined text-[20px]" data-icon="visibility"
+                                        id="icon-pass-2">
+                                        visibility
+                                    </span>
+
+                                </button>
+
+                            </div>
+
+                            <p class="text-xs text-on-surface-variant">
+                                Ambas claves deben coincidir.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pt-2">
+
+                        <label class="flex items-start gap-3.5 cursor-pointer select-none group">
+
+                            <div class="relative flex items-center pt-0.5">
+
+                                <input
+                                    class="w-6 h-6 rounded border-2 border-outline/80 text-primary-container focus:ring-4 focus:ring-primary/20 transition-all cursor-pointer"
+                                    required type="checkbox">
+
+                            </div>
+
+                            <span class="text-body-md text-on-surface leading-snug">
+
+                                Acepto los
+
+                                <a class="font-bold text-primary-container hover:underline focus:outline-none focus:ring-2 focus:ring-primary-container rounded"
+                                    href="#terminos">
+                                    términos y condiciones
+                                </a>
+
+                                de participación ciudadana y la
+
+                                <a class="font-bold text-primary-container hover:underline focus:outline-none focus:ring-2 focus:ring-primary-container rounded"
+                                    href="#privacidad">
+                                    política de privacidad
+                                </a>
+
+                                municipal.
+
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="pt-2">
+
+                        <button
+                            class="w-full min-h-[56px] px-6 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-3 border-2 border-primary-container hover:bg-primary transition-all duration-150 focus:outline-none focus:ring-4 focus:ring-on-primary-fixed-variant active:scale-[0.99] shadow-sm"
+                            type="submit">
+
+                            <span class="material-symbols-outlined text-[24px]" data-icon="how_to_reg">
+                                how_to_reg
+                            </span>
+
+                            <span>
+                                Registrarme en el Portal
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                <div class="relative my-8">
+
+                    <div aria-hidden="true" class="absolute inset-0 flex items-center">
+
+                        <div class="w-full border-t border-outline-variant"></div>
+
+                    </div>
+
+                    <div class="relative flex justify-center text-sm">
+
+                        <span class="bg-surface-container-lowest px-4 text-outline font-medium">
+                            Opciones y Soporte Alternativo
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="space-y-4">
+
+                    <div
+                        class="flex items-center gap-3.5 p-3.5 rounded-lg bg-surface-container-low border border-outline-variant">
+
+                        <div
+                            class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+
+                            <span class="material-symbols-outlined text-[22px]" data-icon="support_agent">
+                                support_agent
+                            </span>
+
+                        </div>
+
+                        <div class="text-sm">
+
+                            <span class="font-bold text-on-surface">
+                                ¿Dificultades para registrarse?
+                            </span>
+
+                            <p class="text-on-surface-variant text-xs">
+                                Comunicate gratis con la
+                                <strong class="text-on-surface">
+                                    Línea Ciudadana 147
+                                </strong>
+                                disponible 24/7 con operadores asistidos.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <a class="w-full min-h-[56px] px-6 rounded-lg bg-surface-container-lowest text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-3 border-2 border-on-surface hover:bg-surface-container transition-all duration-150 focus:outline-none focus:ring-4 focus:ring-primary-container active:scale-[0.99]"
+                        href="#reporte-anonimo">
+
+                        <span class="material-symbols-outlined text-[24px] text-outline" data-icon="visibility_off">
+                            visibility_off
+                        </span>
+
+                        <span>
+                            Hacer un reporte 100% anónimo sin registrarme
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="bg-surface-container-low px-6 py-3 border-t border-outline-variant flex items-center justify-center gap-2 text-xs text-on-surface-variant text-center">
+
+                <span class="material-symbols-outlined text-[16px] text-secondary-container" data-icon="lock">
+                    lock
+                </span>
+
+                <span>
+                    Tus datos personales están protegidos por la Ley Nacional de Protección de Datos Personales Nº
+                    25.326.
+                </span>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER DEL LOGIN -->
+    <footer class="bg-inverse-surface text-inverse-on-surface border-t-2 border-outline-variant w-full mt-auto">
+
+        <div
+            class="flex flex-col md:flex-row justify-between items-center w-full px-gutter py-space-lg max-w-[1200px] mx-auto gap-space-md">
+
+            <div class="flex flex-col items-center md:items-start text-center md:text-left gap-1">
+
+                <div class="flex items-center gap-2">
+
+                    <span class="material-symbols-outlined text-secondary-container" data-icon="security">
+                        security
+                    </span>
+
+                    <span class="font-headline-md text-headline-md text-inverse-on-surface font-bold">
+                        Reporte Ciudadano
+                    </span>
+
+                </div>
+
+                <p class="font-body-md text-body-md text-outline-variant">
+                    © 2024 Reporte Ciudadano - Portal Municipal Oficial. 100% Anónimo y Accesible.
+                </p>
+
+            </div>
+
+
+            <nav aria-label="Enlaces de pie de página"
+                class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2">
+
+                <a class="font-label-md text-label-md text-outline-variant hover:text-inverse-on-surface hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-inverse-on-surface p-1"
+                    href="#">
+                    Privacidad y Anonimato
+                </a>
+
+                <a class="font-label-md text-label-md text-outline-variant hover:text-inverse-on-surface hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-inverse-on-surface p-1"
+                    href="#">
+                    Términos de Servicio
+                </a>
+
+                <a class="font-label-md text-label-md text-outline-variant hover:text-inverse-on-surface hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-inverse-on-surface p-1"
+                    href="#">
+                    Línea Ciudadana 24/7
+                </a>
+
+                <a class="font-label-md text-label-md text-outline-variant hover:text-inverse-on-surface hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-inverse-on-surface p-1"
+                    href="#">
+                    Accesibilidad Universal
+                </a>
+
+            </nav>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="/js/login.js"></script>
+
+</body>
+
+</html>
