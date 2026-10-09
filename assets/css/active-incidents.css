@@ -1,23 +1,17 @@
-@import url(styles.css);
+@import url('styles.css');
 
-/* ==========================================================================
-   1. VARIABLES (:root)
-   ========================================================================== */
+/*  ==========================================================================
+                            VARIABLES (:root)
+    ========================================================================== */
 :root {
-    /* ----------------------------------------------------------------------
-       Tamaños de Fuente (Modifica estos valores para ajustar el texto)
-       ---------------------------------------------------------------------- */
-    --fs-hero-title: 1.75rem;      /* Título "Incidentes en Curso" */
-    --fs-hero-subtitle: 0.95rem;   /* Subtítulo del Hero */
-    --fs-card-title: 1.15rem;      /* Título de la tarjeta de incidente */
-    --fs-card-desc: 0.9rem;        /* Descripción del reporte */
-    --fs-body: 0.875rem;           /* Texto base / Párrafos generales */
-    --fs-small: 0.8rem;            /* Metadatos, fechas, badges y ubicación */
-    --fs-btn: 0.875rem;            /* Texto de botones */
+    --fs-hero-title: 1.75rem;
+    --fs-hero-subtitle: 0.95rem;
+    --fs-card-title: 1.15rem;
+    --fs-card-desc: 0.9rem;
+    --fs-body: 0.875rem;
+    --fs-small: 0.8rem;
+    --fs-btn: 0.875rem;
 
-    /* ----------------------------------------------------------------------
-       Paleta de Colores Base
-       ---------------------------------------------------------------------- */
     --primary-color: #1e3a8a;
     --secondary-color: #0891b2;
     --tertiary-color: #d97706;
@@ -26,9 +20,6 @@
     --text-color: #ffffff;
     --error-color: #ff4d4d;
 
-    /* ----------------------------------------------------------------------
-       Colores Específicos para Estados y Gravedades (Vista de Tarjetas)
-       ---------------------------------------------------------------------- */
     --severity-high-bg: #dc2626;
     --severity-medium-bg: #ea580c;
     --severity-low-bg: #0284c7;
@@ -43,30 +34,18 @@
     --success-color: #16a34a;
 }
 
-/* ==========================================================================
-   2. ESTILOS GENERALES Y CONTENEDOR PRINCIPAL
-   ========================================================================== */
-body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: var(--background-color);
-    color: var(--neutral-color);
-    font-size: var(--fs-body);
-    margin: 0;
-    padding: 0;
-}
-
 .page-container {
     width: 90%;
-    max-width: 100%;
-    margin: 2rem auto;
+    max-width: 1000px;
+    margin: 1.5rem auto;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-/* ==========================================================================
-   3. HERO / ENCABEZADO DE LA SECCIÓN
-   ========================================================================== */
+/*  ==========================================================================
+                            Encabezado
+    ========================================================================== */
 .incidents-hero-section {
     display: flex;
     justify-content: space-between;
@@ -115,9 +94,9 @@ body {
     border-radius: 50%;
 }
 
-/* ==========================================================================
-   4. BARRA DE FILTROS Y BÚSQUEDA
-   ========================================================================== */
+/*  ==========================================================================
+                            Barra de Búsqueda y Filtros
+    ========================================================================== */
 .filters-section {
     background-color: #ffffff;
     padding: 0.75rem 1rem;
@@ -195,147 +174,9 @@ body {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* ==========================================================================
-   5. TARJETAS DE INCIDENTES (.incident-card)
-   ========================================================================== */
-.incidents-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-}
-
-.incident-card {
-    display: flex;
-    background-color: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.incident-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
-}
-
-/* 5.1 Imagen Lateral con ID */
-.card-media {
-    position: relative;
-    width: 220px;
-    min-width: 220px;
-}
-
-.incident-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.incident-id-badge {
-    position: absolute;
-    top: 0.75rem;
-    left: 0.75rem;
-    background-color: rgba(15, 23, 42, 0.85);
-    color: #ffffff;
-    font-size: var(--fs-small);
-    font-weight: 700;
-    padding: 0.2rem 0.5rem;
-    border-radius: 0.25rem;
-}
-
-/* 5.2 Cuerpo de la Tarjeta */
-.card-body {
-    display: flex;
-    flex-direction: column;
-    padding: 1.25rem;
-    flex: 1;
-}
-
-.card-header-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.5rem;
-}
-
-.badge-group {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.badge {
-    font-size: var(--fs-small);
-    font-weight: 700;
-    padding: 0.2rem 0.6rem;
-    border-radius: 1rem;
-    color: #ffffff;
-}
-
-/* Modificadores de Gravedad y Estado */
-.badge-high-severity { background-color: var(--severity-high-bg); }
-.badge-medium-severity { background-color: var(--severity-medium-bg); }
-.badge-low-severity { background-color: var(--severity-low-bg); }
-
-.badge-in-progress { background-color: var(--status-progress-bg); }
-.badge-active {
-    background-color: var(--status-active-bg);
-    color: var(--status-active-text);
-}
-
-.meta-time {
-    font-size: var(--fs-small);
-    color: #94a3b8;
-}
-
-.card-title {
-    font-size: var(--fs-card-title);
-    font-weight: 700;
-    margin: 0 0 0.35rem 0;
-    color: var(--neutral-color);
-}
-
-.card-location {
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-    font-size: var(--fs-small);
-    color: var(--text-muted);
-    margin-bottom: 0.75rem;
-}
-
-.card-description {
-    font-size: var(--fs-card-desc);
-    color: #475569;
-    line-height: 1.45;
-    margin: 0 0 1rem 0;
-}
-
-/* 5.3 Pie de Tarjeta */
-.card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: auto;
-    padding-top: 0.75rem;
-    border-top: 1px solid #f1f5f9;
-}
-
-.anon-vote-info {
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-    font-size: var(--fs-small);
-    color: #94a3b8;
-}
-
-.anon-vote-info.voted {
-    color: var(--success-color);
-    font-weight: 600;
-}
-
-/* Botones de Apoyo */
+/*  ==========================================================================
+                                Botones de Apoyo
+    ========================================================================== */
 .support-btn {
     display: inline-flex;
     align-items: center;
@@ -369,9 +210,9 @@ body {
     background-color: #15803d;
 }
 
-/* ==========================================================================
-   6. PAGINACIÓN Y CONTADORES
-   ========================================================================== */
+/*  ==========================================================================
+                                Paginación
+    ========================================================================== */
 .pagination-section {
     display: flex;
     justify-content: space-between;
@@ -416,14 +257,11 @@ body {
     background-color: #1e40af;
 }
 
-/* ==========================================================================
-   7. ADAPTACIÓN RESPONSIVA (Móviles y Tablets)
-   ========================================================================== */
-@media (max-width: 768px) {
-    .page-container {
-        width: 95%;
-    }
+/*  ==========================================================================
+                                MEDIA QUERIES
+    ========================================================================== */
 
+@media (max-width: 768px) {
     .incidents-hero-section {
         flex-direction: column;
         align-items: flex-start;
@@ -432,21 +270,6 @@ body {
     .filters-form {
         flex-direction: column;
         align-items: stretch;
-    }
-
-    .incident-card {
-        flex-direction: column;
-    }
-
-    .card-media {
-        width: 100%;
-        height: 180px;
-    }
-
-    .card-footer {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.75rem;
     }
 
     .support-btn {

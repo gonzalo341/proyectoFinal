@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Incidentes activos</title>
-    <link rel="stylesheet" href="/assets/css/active-incidents.css">
+    <title>Incidentes Activos - Reporte Ciudadano</title>
+    <link rel="stylesheet" href="assets/css/active-incidents.css">
 </head>
 
 <body>
@@ -14,20 +14,11 @@
 
         <!-- Brand / Logo Section -->
         <a class="brand-logo" href="/index.html" aria-label="Reporte Ciudadano - Inicio">
-            <svg class="brand-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 106" fill="none"
-                aria-hidden="true">
-                <!-- Shield outer shape -->
-                <path
-                    d="M50 6 C70 6 86 13 90 17 C90 50 83 75 69 90 C58 100 50 104 50 104 C50 104 42 100 31 90 C17 75 10 50 10 17 C14 13 30 6 50 6 Z"
-                    fill="#ffffff" />
-                <!-- Location pin -->
-                <path d="M50 24 C60 24 68 32 68 42 C68 55 50 72 50 72 C50 72 32 55 32 42 C32 32 40 24 50 24 Z"
-                    fill="var(--primary-color)" />
-                <!-- Inner pin dot -->
+            <svg class="brand-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 106" fill="none" aria-hidden="true">
+                <path d="M50 6 C70 6 86 13 90 17 C90 50 83 75 69 90 C58 100 50 104 50 104 C50 104 42 100 31 90 C17 75 10 50 10 17 C14 13 30 6 50 6 Z" fill="#ffffff" />
+                <path d="M50 24 C60 24 68 32 68 42 C68 55 50 72 50 72 C50 72 32 55 32 42 C32 32 40 24 50 24 Z" fill="var(--primary-color)" />
                 <circle cx="50" cy="41" r="5.5" fill="#ffffff" />
-                <!-- Checkmark -->
-                <path d="M41 81 L48 88 L60 74" fill="none" stroke="var(--primary-color)" stroke-width="5"
-                    stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M41 81 L48 88 L60 74" fill="none" stroke="var(--primary-color)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
 
             <div class="brand-text">
@@ -43,7 +34,7 @@
                     <a class="nav-link" id="nav-home-link" href="/index.html">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="nav-reports-link" href="active-incidents.html">Reportes</a>
+                    <a class="nav-link active" id="nav-reports-link" href="active-incidents.html">Reportes</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="nav-contact-link" href="contact.html">Contacto</a>
@@ -51,16 +42,12 @@
             </ul>
         </nav>
 
-        <!-- User Utility Actions (Notifications & Profile) -->
+        <!-- User Utility Actions -->
         <div class="user-menu" id="user-menu">
 
-            <!-- Notifications Action Item -->
             <div class="user-action-item" id="notifications-menu-item">
-                <a class="action-link notification-link" id="notification-btn" href="notifications.html"
-                    aria-label="Ver notificaciones">
-                    <svg class="action-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none"
-                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
-                        aria-hidden="true">
+                <a class="action-link notification-link" id="notification-btn" href="notifications.html" aria-label="Ver notificaciones">
+                    <svg class="action-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path d="M24 4c-5.5 0-10 4.5-10 10v10c0 4-2 7-5 9h30c-3-2-5-5-5-9V14c0-5.5-4.5-10-10-10z" />
                         <path d="M18 37a6 6 0 0 0 12 0" />
                     </svg>
@@ -68,13 +55,9 @@
                 </a>
             </div>
 
-            <!-- Profile Action Item -->
             <div class="user-action-item" id="profile-menu-item">
-                <a class="action-link profile-link" id="profile-btn" href="profile.html"
-                    aria-label="Ver perfil de usuario">
-                    <svg class="action-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none"
-                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
-                        aria-hidden="true">
+                <a class="action-link profile-link" id="profile-btn" href="profile.html" aria-label="Ver perfil de usuario">
+                    <svg class="action-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <circle cx="24" cy="16" r="8" />
                         <path d="M10 40c0-6 6-10 14-10s14 4 14 10" />
                     </svg>
@@ -89,7 +72,7 @@
     <!-- Contenedor Principal de la Página -->
     <main class="page-container">
 
-        <!-- 1. Encabezado de la Sección de Incidentes -->
+        <!-- 1. Encabezado Hero -->
         <section class="incidents-hero-section">
             <div class="hero-text-content">
                 <span class="portal-badge">• PORTAL COMUNAL ABIERTO</span>
@@ -104,7 +87,6 @@
         <!-- 2. Barra de Búsqueda y Filtros -->
         <section class="filters-section">
             <form class="filters-form" action="" method="GET">
-                <!-- Buscador por texto -->
                 <div class="search-box">
                     <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="11" cy="11" r="8"></circle>
@@ -113,7 +95,6 @@
                     <input class="search-input" type="text" id="filter-search" placeholder="Buscar por calle, zona o categoría...">
                 </div>
 
-                <!-- Selector de Gravedad -->
                 <div class="filter-dropdown-wrapper">
                     <select class="filter-select" id="filter-severity">
                         <option value="all">Todas las gravedades</option>
@@ -123,7 +104,6 @@
                     </select>
                 </div>
 
-                <!-- Switch Vista: Lista / Mapa -->
                 <div class="view-toggle-container">
                     <button type="button" class="view-btn active" id="view-list-btn">
                         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
@@ -148,30 +128,26 @@
             </form>
         </section>
 
-        <!-- 3. Lista de Incidentes Activos (Tarjetas Horizontales) -->
+        <!-- 3. Lista de Incidentes Activos -->
         <section class="active-incidents-section" id="active-incidents-list-section">
             <div class="incidents-list">
 
-                <!-- TARJETA 1 (Gravedad Alta) -->
+                <!-- TARJETA 1 -->
                 <article class="incident-card">
-                    <!-- Imagen con ID superpuesto -->
                     <div class="card-media">
                         <span class="incident-id-badge">#94812</span>
                         <img class="incident-image" src="/assets/img/camara.png" alt="Cables y postes caídos">
                     </div>
 
-                    <!-- Contenido principal de la tarjeta -->
                     <div class="card-body">
-                        <!-- Cabecera: Tags de Estado y Tiempo transcurrido -->
                         <div class="card-header-meta">
                             <div class="badge-group">
-                                <span class="badge badge-high-severity">• Gravedad Alta</span>
+                                <span class="badge badge-high-severity">Gravedad Alta</span>
                                 <span class="badge badge-in-progress">En Proceso</span>
                             </div>
                             <time class="meta-time">Hace 42 min</time>
                         </div>
 
-                        <!-- Título y Ubicación -->
                         <h2 class="card-title">Cables y postes caídos</h2>
                         <div class="card-location">
                             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
@@ -181,12 +157,10 @@
                             <span>Av. San Martín y Sarmiento</span>
                         </div>
 
-                        <!-- Descripción -->
                         <p class="card-description">
                             Poste de tendido eléctrico quebrado sobre la vereda con cables bajos. Riesgo para transeúntes. Cuadrilla municipal notificada.
                         </p>
 
-                        <!-- Pie de tarjeta: Indicador y Botón de Acción -->
                         <div class="card-footer">
                             <div class="anon-vote-info">
                                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
@@ -202,7 +176,7 @@
                     </div>
                 </article>
 
-                <!-- TARJETA 2 (Gravedad Media) -->
+                <!-- TARJETA 2 -->
                 <article class="incident-card">
                     <div class="card-media">
                         <span class="incident-id-badge">#94765</span>
@@ -212,7 +186,7 @@
                     <div class="card-body">
                         <div class="card-header-meta">
                             <div class="badge-group">
-                                <span class="badge badge-medium-severity">• Gravedad Media</span>
+                                <span class="badge badge-medium-severity">Gravedad Media</span>
                                 <span class="badge badge-active">Activo</span>
                             </div>
                             <time class="meta-time">Ayer, 16:20 hs</time>
@@ -246,7 +220,7 @@
                     </div>
                 </article>
 
-                <!-- TARJETA 3 (Gravedad Baja) -->
+                <!-- TARJETA 3 -->
                 <article class="incident-card">
                     <div class="card-media">
                         <span class="incident-id-badge">#94690</span>
@@ -256,7 +230,7 @@
                     <div class="card-body">
                         <div class="card-header-meta">
                             <div class="badge-group">
-                                <span class="badge badge-low-severity">• Gravedad Baja</span>
+                                <span class="badge badge-low-severity">Gravedad Baja</span>
                                 <span class="badge badge-active">Activo</span>
                             </div>
                             <time class="meta-time">Hace 2 días</time>
@@ -293,17 +267,18 @@
             </div>
         </section>
 
-        <!-- 4. Paginación y Contador de Registros -->
+        <!-- 4. Paginación -->
         <section class="pagination-section">
             <p class="pagination-info">Mostrando 3 de 74 reportes</p>
             <div class="pagination-controls">
-                <button class="btn-pagination" disabled>Anterior</button>
-                <button class="btn-pagination btn-primary">Cargar más</button>
+                <button class="btn-pagination" disabled type="button">Anterior</button>
+                <button class="btn-pagination btn-primary" type="button">Cargar más</button>
             </div>
         </section>
 
     </main>
 
+    <footer></footer>
 </body>
 
 </html>
