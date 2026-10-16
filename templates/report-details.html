@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Reporte - Reporte Ciudadano</title>
+    <link rel="stylesheet" href="/assets/css/report-details.css">
+</head>
+
+<body class="details-page">
+<!-- Main Header (Global Navigation Bar) -->
+    <header class="main-header" id="main-header">
+
+        <!-- Brand / Logo Section -->
+        <a class="brand-logo" href="/index.html" aria-label="Reporte Ciudadano - Inicio">
+            <svg class="brand-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 106" fill="none" aria-hidden="true">
+                <path d="M50 6 C70 6 86 13 90 17 C90 50 83 75 69 90 C58 100 50 104 50 104 C50 104 42 100 31 90 C17 75 10 50 10 17 C14 13 30 6 50 6 Z" fill="#ffffff" />
+                <path d="M50 24 C60 24 68 32 68 42 C68 55 50 72 50 72 C50 72 32 55 32 42 C32 32 40 24 50 24 Z" fill="var(--primary-color)" />
+                <circle cx="50" cy="41" r="5.5" fill="#ffffff" />
+                <path d="M41 81 L48 88 L60 74" fill="none" stroke="var(--primary-color)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            <div class="brand-text">
+                <span class="brand-title">Reporte Ciudadano</span>
+                <span class="brand-subtitle">Municipio Activo</span>
+            </div>
+        </a>
+
+        <!-- Primary Navigation Links -->
+        <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+            <ul class="nav-list">
+                <li class="nav-item nav-item-home">
+                    <a class="nav-link" id="nav-home-link" href="/index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" id="nav-reports-link" href="active-incidents.html">Reportes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="nav-contact-link" href="contact.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- User Utility Actions -->
+        <div class="user-menu" id="user-menu">
+
+            <div class="user-action-item" id="notifications-menu-item">
+                <a class="action-link notification-link" id="notification-btn" href="notifications.html" aria-label="Ver notificaciones">
+                    <svg class="action-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M24 4c-5.5 0-10 4.5-10 10v10c0 4-2 7-5 9h30c-3-2-5-5-5-9V14c0-5.5-4.5-10-10-10z" />
+                        <path d="M18 37a6 6 0 0 0 12 0" />
+                    </svg>
+                    <span class="action-label">Notificaciones</span>
+                </a>
+            </div>
+
+            <div class="user-action-item" id="profile-menu-item">
+                <a class="action-link profile-link" id="profile-btn" href="profile.html" aria-label="Ver perfil de usuario">
+                    <svg class="action-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="24" cy="16" r="8" />
+                        <path d="M10 40c0-6 6-10 14-10s14 4 14 10" />
+                    </svg>
+                    <span class="action-label">Perfil</span>
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="details-main-container">
+
+        <!-- Barra Superior de Navegación -->
+        <nav class="breadcrumb-container" id="breadcrumb-nav">
+            <a class="back-link" href="my-reports.html">
+                ← Volver a Mis Incidentes
+            </a>
+        </nav>
+
+        <!-- Tarjeta Contenedora Principal -->
+        <article class="details-card">
+
+            <!-- Cabecera del Reporte -->
+            <section class="details-card-header">
+                <div class="header-left-meta">
+                    <div class="badges-row">
+                        <span class="incident-id-badge">#REP-84920</span>
+                        <span class="category-text">INFRAESTRUCTURA VIAL</span>
+                        <span class="status-pill status-pill-gestional">• En gestión</span>
+                    </div>
+
+                    <h1 class="report-main-heading">Tapas de alcantarilla rotas</h1>
+
+                    <div class="timestamps-row">
+                        <span class="timestamp-item">
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            Reportado hoy a las 09:15 hs
+                        </span>
+                        <span class="meta-dot">•</span>
+                        <span class="timestamp-item">
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            Respuesta estimada: 24 a 48 hs
+                        </span>
+                    </div>
+                </div>
+
+                <div class="header-actions">
+                    <button type="button" class="btn-edit-action">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                        </svg>
+                        Editar reporte
+                    </button>
+                    <button type="button" class="btn-download-action" aria-label="Descargar reporte">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Grilla de Información Clave -->
+            <section class="info-grid-container">
+                <div class="info-card-block">
+                    <span class="block-label">UBICACIÓN</span>
+                    <strong class="block-title">Calle Belgrano 120</strong>
+                    <span class="block-subtitle">Barrio Centro</span>
+                </div>
+
+                <div class="info-card-block">
+                    <span class="block-label">CUADRILLA ASIGNADA</span>
+                    <strong class="block-title">Viales Noroeste (Móvil 04)</strong>
+                    <span class="block-subtitle">Capataz R. Domínguez</span>
+                </div>
+
+                <div class="info-card-block">
+                    <span class="block-label">VALIDACIÓN CIUDADANA</span>
+                    <strong class="block-title">8 vecinos confirmaron</strong>
+                    <button type="button" class="confirm-link-btn">+ Confirmar reclamo</button>
+                </div>
+            </section>
+
+            <!-- Sección de Evidencia Fotográfica -->
+            <section class="evidence-section">
+                <h2 class="section-block-title">EVIDENCIA FOTOGRÁFICA</h2>
+                <div class="photo-container">
+                    <img class="evidence-photo" src="/assets/img/camara.png" alt="Evidencia de tapas de alcantarilla rotas">
+                    <span class="photo-location-overlay">Belgrano 120 • 09:15 hs</span>
+                </div>
+            </section>
+
+            <!-- Sección de Descripción -->
+            <section class="description-section">
+                <h2 class="section-block-title">DESCRIPCIÓN</h2>
+                <blockquote class="description-quote">
+                    “Tapa de sumidero pluvial rota y desplazada en el cruce peatonal de Calle Belgrano 120, genera peligro inminente de caída para peatones y daños a neumáticos vehiculares. Se requiere reposición de reja de hierro fundido estándar de 60x40 cm.”
+                </blockquote>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer></footer>
+
+</body>
+
+</html>
