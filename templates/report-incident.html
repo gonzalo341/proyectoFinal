@@ -3,31 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=}, initial-scale=1.0">
-    <title>Reportar incidentes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Incidente - Reporte Ciudadano</title>
     <link rel="stylesheet" href="/assets/css/report-incident.css">
 </head>
 
-<body>
-    <!-- Main Header (Global Navigation Bar) -->
-    <header class="main-header" id="main-header">
+<body class="report-page">
 
-        <!-- Brand / Logo Section -->
+    <!-- Header Global de Navegación -->
+    <header class="main-header" id="main-header">
         <a class="brand-logo" href="/index.html" aria-label="Reporte Ciudadano - Inicio">
-            <svg class="brand-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 106" fill="none"
-                aria-hidden="true">
-                <!-- Shield outer shape -->
-                <path
-                    d="M50 6 C70 6 86 13 90 17 C90 50 83 75 69 90 C58 100 50 104 50 104 C50 104 42 100 31 90 C17 75 10 50 10 17 C14 13 30 6 50 6 Z"
-                    fill="#ffffff" />
-                <!-- Location pin -->
-                <path d="M50 24 C60 24 68 32 68 42 C68 55 50 72 50 72 C50 72 32 55 32 42 C32 32 40 24 50 24 Z"
-                    fill="var(--primary-color)" />
-                <!-- Inner pin dot -->
+            <svg class="brand-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 106" fill="none" aria-hidden="true">
+                <path d="M50 6 C70 6 86 13 90 17 C90 50 83 75 69 90 C58 100 50 104 50 104 C50 104 42 100 31 90 C17 75 10 50 10 17 C14 13 30 6 50 6 Z" fill="#ffffff" />
+                <path d="M50 24 C60 24 68 32 68 42 C68 55 50 72 50 72 C50 72 32 55 32 42 C32 32 40 24 50 24 Z" fill="var(--primary-color)" />
                 <circle cx="50" cy="41" r="5.5" fill="#ffffff" />
-                <!-- Checkmark -->
-                <path d="M41 81 L48 88 L60 74" fill="none" stroke="var(--primary-color)" stroke-width="5"
-                    stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M41 81 L48 88 L60 74" fill="none" stroke="var(--primary-color)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
 
             <div class="brand-text">
@@ -36,7 +26,6 @@
             </div>
         </a>
 
-        <!-- Primary Navigation Links -->
         <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
             <ul class="nav-list">
                 <li class="nav-item nav-item-home">
@@ -51,16 +40,10 @@
             </ul>
         </nav>
 
-        <!-- User Utility Actions (Notifications & Profile) -->
         <div class="user-menu" id="user-menu">
-
-            <!-- Notifications Action Item -->
             <div class="user-action-item" id="notifications-menu-item">
-                <a class="action-link notification-link" id="notification-btn" href="notifications.html"
-                    aria-label="Ver notificaciones">
-                    <svg class="action-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none"
-                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
-                        aria-hidden="true">
+                <a class="action-link notification-link" id="notification-btn" href="notifications.html" aria-label="Ver notificaciones">
+                    <svg class="action-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path d="M24 4c-5.5 0-10 4.5-10 10v10c0 4-2 7-5 9h30c-3-2-5-5-5-9V14c0-5.5-4.5-10-10-10z" />
                         <path d="M18 37a6 6 0 0 0 12 0" />
                     </svg>
@@ -68,23 +51,185 @@
                 </a>
             </div>
 
-            <!-- Profile Action Item -->
             <div class="user-action-item" id="profile-menu-item">
-                <a class="action-link profile-link" id="profile-btn" href="profile.html"
-                    aria-label="Ver perfil de usuario">
-                    <svg class="action-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none"
-                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
-                        aria-hidden="true">
+                <a class="action-link profile-link" id="profile-btn" href="profile.html" aria-label="Ver perfil de usuario">
+                    <svg class="action-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <circle cx="24" cy="16" r="8" />
                         <path d="M10 40c0-6 6-10 14-10s14 4 14 10" />
                     </svg>
                     <span class="action-label">Perfil</span>
                 </a>
             </div>
-
         </div>
-
     </header>
+
+    <!-- Contenido Principal -->
+    <main class="report-main-container">
+
+        <!-- Encabezado de la página -->
+        <section class="report-header-section">
+            <div class="header-icon-circle">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+            </div>
+            <h1 class="report-title">Registrar Incidente</h1>
+            <p class="report-subtitle">Reporte vecinal anónimo y directo para cuadrillas municipales</p>
+        </section>
+
+        <!-- Tarjeta del Formulario -->
+        <section class="form-card">
+            <form class="report-form" action="" method="POST" enctype="multipart/form-data">
+
+                <!-- 1. Categoría del reporte -->
+                <div class="form-step">
+                    <label class="step-label">1. CATEGORÍA DEL REPORTE <span class="required-asterisk">*</span></label>
+                    <div class="category-grid">
+                        <button type="button" class="category-btn active">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 3v18M18 3v18M6 12h12M6 7h12M6 17h12"></path>
+                            </svg>
+                            Vialidad
+                        </button>
+                        <button type="button" class="category-btn">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"></path>
+                                <path d="M9 21h6"></path>
+                            </svg>
+                            Alumbrado
+                        </button>
+                        <button type="button" class="category-btn">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 19V6M12 6L8 10M12 6l4 4"></path>
+                                <path d="M12 2a7 7 0 0 0-7 7c0 4 7 10 7 10s7-6 7-10a7 7 0 0 0-7-7z"></path>
+                            </svg>
+                            Arbolado
+                        </button>
+                        <button type="button" class="category-btn">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="3 6 5 6 21 6"></polyline>
+                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                            </svg>
+                            Higiene Urbana
+                        </button>
+                        <button type="button" class="category-btn">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="6" y="2" width="12" height="20" rx="2"></rect>
+                                <circle cx="12" cy="6" r="2"></circle>
+                                <circle cx="12" cy="12" r="2"></circle>
+                                <circle cx="12" cy="18" r="2"></circle>
+                            </svg>
+                            Semáforos
+                        </button>
+                        <button type="button" class="category-btn">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                            </svg>
+                            Aguas / Fugas
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2. Ubicación del incidente -->
+                <div class="form-step">
+                    <div class="step-label-row">
+                        <label class="step-label" for="incident-location">2. UBICACIÓN DEL INCIDENTE <span class="required-asterisk">*</span></label>
+                        <button type="button" class="gps-btn">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <line x1="12" y1="2" x2="12" y2="4"></line>
+                                <line x1="12" y1="20" x2="12" y2="22"></line>
+                                <line x1="2" y1="12" x2="4" y2="12"></line>
+                                <line x1="20" y1="12" x2="22" y2="12"></line>
+                            </svg>
+                            Usar GPS actual
+                        </button>
+                    </div>
+                    <div class="input-with-icon">
+                        <svg class="input-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <input class="text-input" type="text" id="incident-location" name="direccion" placeholder="Ej: San Martín 1420 esq. Belgrano" required>
+                    </div>
+                </div>
+
+                <!-- 3. Evidencia fotográfica -->
+                <div class="form-step">
+                    <label class="step-label">3. EVIDENCIA FOTOGRÁFICA</label>
+
+                    <!-- Zona de arrastre / Carga -->
+                    <div class="upload-dropzone">
+                        <input type="file" id="photo-evidence" name="evidencia-fotografica" accept="image/png, image/jpeg" multiple class="file-input-hidden">
+                        <label for="photo-evidence" class="dropzone-trigger">
+                            <div class="camera-icon-circle">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                                    <circle cx="12" cy="13" r="4"></circle>
+                                </svg>
+                            </div>
+                            <div class="dropzone-text">
+                                <span class="dropzone-title">Adjuntar foto o arrastrar archivo</span>
+                                <span class="dropzone-subtitle">JPG o PNG hasta 10MB</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Vista previa del archivo cargado -->
+                    <div class="uploaded-file-preview">
+                        <img class="preview-thumbnail" src="/assets/img/camara.png" alt="Previsualización">
+                        <div class="file-info">
+                            <span class="file-name">evidencia_calle_bache.jpg</span>
+                            <span class="file-status">2.4 MB • Lista para envío</span>
+                        </div>
+                        <button type="button" class="remove-file-btn" aria-label="Eliminar archivo">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 4. Detalles adicionales -->
+                <div class="form-step">
+                    <div class="step-label-row">
+                        <label class="step-label" for="additional-details">4. DETALLES ADICIONALES <span class="optional-tag">(opcional)</span></label>
+                        <span class="char-counter">0/240</span>
+                    </div>
+                    <textarea class="textarea-input" id="additional-details" name="detalles" rows="3" maxlength="240" placeholder="Información breve de apoyo para la cuadrilla de resolución..."></textarea>
+                </div>
+
+                <!-- Acciones del Formulario -->
+                <div class="form-actions">
+                    <a href="/index.html" class="btn-cancel">Cancelar</a>
+                    <button type="submit" class="btn-submit">
+                        Enviar Reporte
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+        <!-- Mensaje de Privacidad -->
+        <p class="privacy-note">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            Tus datos de contacto nunca son compartidos públicamente.
+        </p>
+
+    </main>
+
+    <footer></footer>
+
 </body>
 
 </html>
