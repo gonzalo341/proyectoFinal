@@ -37,32 +37,24 @@
 /*  ==========================================================================
                             TAMAÑOS DE FUENTE
     ========================================================================== */
-.breadcrumb-container {
+.breadcrumb-container,
+.block-subtitle,
+.confirm-link-btn,
+.timestamps-row,
+.btn-edit-action {
     font-size: var(--fs-small);
 }
 
-.incident-id-badge {
-    font-size: 0.75rem;
-}
-
-.category-text {
-    font-size: 0.75rem;
-}
-
-.status-pill-gestional {
+.category-text,
+.incident-id-badge,
+.status-pill-gestional,
+.photo-location-overlay,
+.section-block-title {
     font-size: 0.75rem;
 }
 
 .report-main-heading {
     font-size: 1.85rem;
-}
-
-.timestamps-row {
-    font-size: var(--fs-small);
-}
-
-.btn-edit-action {
-    font-size: var(--fs-small);
 }
 
 .block-label {
@@ -71,22 +63,6 @@
 
 .block-title {
     font-size: 0.9rem;
-}
-
-.block-subtitle {
-    font-size: var(--fs-small);
-}
-
-.confirm-link-btn {
-    font-size: var(--fs-small);
-}
-
-.section-block-title {
-    font-size: 0.75rem;
-}
-
-.photo-location-overlay {
-    font-size: 0.75rem;
 }
 
 .description-quote {

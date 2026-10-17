@@ -1,4 +1,5 @@
 @import url('styles.css');
+
 /*  ==========================================================================
                             VARIABLES (:root)
     ========================================================================== */
@@ -22,21 +23,66 @@
     --severity-high-bg: #dc2626;
     --severity-medium-bg: #ea580c;
     --severity-low-bg: #0284c7;
-    
+
     --status-active-bg: #e2e8f0;
     --status-active-text: #334155;
     --status-progress-bg: #f97316;
-    
+
     --card-bg: #ffffff;
     --card-border: #e2e8f0;
     --text-muted: #64748b;
     --success-color: #16a34a;
 }
 
-/*  ==========================================================================
-                ESTILOS DE REGISTRAR INCIDENTE (report-incident.css)
-    ========================================================================== */
 
+/*  ==========================================================================
+                            TAMAÑOS DE FUENTE
+    ========================================================================== */
+.report-title {
+    font-size: 1.75rem;
+}
+
+.report-subtitle {
+    font-size: var(--fs-hero-subtitle);
+}
+
+.char-counter,
+.file-status,
+.dropzone-subtitle {
+    font-size: 0.75rem;
+}
+
+.text-input,
+.textarea-input,
+.category-btn {
+    font-size: var(--fs-body);
+}
+
+.gps-btn {
+    font-size: var(--fs-small);
+}
+
+.dropzone-title {
+    font-size: 0.9rem;
+}
+
+.file-name {
+    font-size: 0.85rem;
+}
+
+.btn-cancel,
+.btn-submit {
+    font-size: var(--fs-btn);
+}
+
+.privacy-note,
+.step-label {
+    font-size: 0.8rem;
+}
+
+/*  ==========================================================================
+                        ESTILOS DE REGISTRAR INCIDENTE
+    ========================================================================== */
 .report-main-container {
     width: 90%;
     max-width: 680px;
@@ -46,7 +92,7 @@
     align-items: center;
 }
 
-/* 1. Encabezado */
+/* 3.1. Encabezado */
 .report-header-section {
     text-align: center;
     margin-bottom: 1.75rem;
@@ -65,19 +111,17 @@
 }
 
 .report-title {
-    font-size: 1.75rem;
     font-weight: 800;
     color: var(--neutral-color);
     margin: 0 0 0.35rem 0;
 }
 
 .report-subtitle {
-    font-size: var(--fs-hero-subtitle);
     color: var(--text-muted);
     margin: 0;
 }
 
-/* 2. Tarjeta Contenedora del Formulario */
+/* 3.2. Tarjeta Contenedora del Formulario */
 .form-card {
     width: 100%;
     background-color: #ffffff;
@@ -108,7 +152,6 @@
 }
 
 .step-label {
-    font-size: 0.8rem;
     font-weight: 800;
     color: var(--text-muted);
     letter-spacing: 0.04em;
@@ -126,7 +169,6 @@
 }
 
 .char-counter {
-    font-size: 0.75rem;
     color: #94a3b8;
 }
 
@@ -145,7 +187,6 @@
     background-color: #f8fafc;
     border: 1px solid var(--card-border);
     border-radius: 0.75rem;
-    font-size: var(--fs-body);
     font-weight: 600;
     color: var(--neutral-color);
     cursor: pointer;
@@ -171,7 +212,6 @@
     background: transparent;
     border: none;
     color: var(--primary-color);
-    font-size: var(--fs-small);
     font-weight: 700;
     cursor: pointer;
 }
@@ -198,7 +238,6 @@
     padding: 0.85rem 1rem 0.85rem 2.75rem;
     border: 1px solid var(--card-border);
     border-radius: 0.75rem;
-    font-size: var(--fs-body);
     color: var(--neutral-color);
     background-color: #f8fafc;
     outline: none;
@@ -217,7 +256,6 @@
     padding: 0.85rem 1rem;
     border: 1px solid var(--card-border);
     border-radius: 0.75rem;
-    font-size: var(--fs-body);
     color: var(--neutral-color);
     background-color: #f8fafc;
     outline: none;
@@ -267,13 +305,11 @@
 }
 
 .dropzone-title {
-    font-size: 0.9rem;
     font-weight: 700;
     color: var(--neutral-color);
 }
 
 .dropzone-subtitle {
-    font-size: 0.75rem;
     color: #94a3b8;
 }
 
@@ -303,13 +339,11 @@
 }
 
 .file-name {
-    font-size: 0.85rem;
     font-weight: 700;
     color: var(--neutral-color);
 }
 
 .file-status {
-    font-size: 0.75rem;
     color: #64748b;
 }
 
@@ -341,7 +375,6 @@
     background-color: #f1f5f9;
     color: var(--neutral-color);
     text-decoration: none;
-    font-size: var(--fs-btn);
     font-weight: 700;
     transition: background-color 0.2s ease;
 }
@@ -359,7 +392,6 @@
     background-color: var(--primary-color);
     color: #ffffff;
     border: none;
-    font-size: var(--fs-btn);
     font-weight: 700;
     cursor: pointer;
     transition: background-color 0.2s ease;
@@ -374,11 +406,9 @@
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    font-size: 0.8rem;
     color: #94a3b8;
     margin-top: 1.25rem;
 }
-
 
 /*  ==========================================================================
                                 MEDIA QUERIES
